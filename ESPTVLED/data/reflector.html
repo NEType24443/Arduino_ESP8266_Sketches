@@ -1,0 +1,59 @@
+<body>
+<h2>
+Reflector
+</h2>
+<h4>
+Enter colour value
+</h4>
+<form action=/reflector>
+<input type="color" name="color" value="#000000"><br>
+<h4>
+Cycles Details
+</h4>
+Cycle Duration:
+<br>
+<input type=range value=0 step=1000 name=cycleDuration id=cycdur min=1000 max=50000 oninput=cycdurout.value=cycdur.value>
+<output name=cycdurout id=cycdurout>1000</output>
+<br>
+Cycles:
+<br>
+<input type=range value=0 name=cycle id=cycle min=5 max=100 oninput=cycout.value=cycle.value>
+<output name=cycout id=cycout>0</output>
+<br>
+<h4>
+Packet Details
+</h4>
+[If packet duration is 0 then it is disabled]
+<br><br>
+Duration of Packet 1:
+<br>
+<input type=range value=0 step=5 name=d1 id=d1 min=0 max=2000 oninput=d1out.value=d1.value>
+<output name=d1out id=d1out>0</output>
+<br>
+Duration of Packet 2:
+<br>
+<input type=range value=0 step=5 name=d2 id=d2 min=0 max=2000 oninput=d2out.value=d2.value>
+<output name=d2out id=d2out>0</output>
+<br>
+Duration of Packet 3:
+<br>
+<input type=range value=0 step=5 name=d3 id=d3 min=0 max=2000 oninput=d3out.value=d3.value>
+<output name=d3out id=d3out>0</output>
+<br>
+Duration of Packet 4:
+<br>
+<input type=range value=0 step=5 name=d4 id=d4 min=0 max=2000 oninput=d4out.value=d4.value>
+<output name=d4out id=d4out>0</output>
+<br><br>
+<input type=submit value=Apply>
+<br><br>
+<a href =/stop >
+<input type=button onclick=alert('Animation Stopped') value=STOP>
+</a>
+<br><br>
+<a href =/ >
+<input type=button value=HOME>
+</a>
+</form>
+</body>
+</html>
