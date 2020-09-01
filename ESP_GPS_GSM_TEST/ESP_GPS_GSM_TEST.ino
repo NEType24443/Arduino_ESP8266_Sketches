@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h> //Software Serial header to communicate with GSM module 
-#include<Streaming.h>
+#include <Streaming.h>
 
 SoftwareSerial SIM800 (D6, D5); // RX, TX
 SoftwareSerial GPS    (D7, A0); // RX, TX
@@ -126,9 +126,10 @@ void loop() {
 
       SIM800<<"AT+CMGS="<<"\""<<PHONENUM<<"\""<<endl; //Send SMS to this number
       delay(1000);
-
-      Serial<<BaseLink<<posllh.lat<<","<<posllh.lon<<endl;
-      SIM800<<BaseLink<<posllh.lat<<","<<posllh.lon<<endl<<(char)26<<endl;
+      String Lat = String(posllh.lat/10000000) + "." + String(posllh.lat%10000000);
+      String Lon = String(posllh.lon/10000000) + "." + String(posllh.lon%10000000);
+      Serial<< BaseLink << Lat <<","<< Lon << endl;
+      SIM800<< BaseLink << Lat <<","<< Lon << endl<< (char)26 <<endl;
       delay(1000);
     }
   }
