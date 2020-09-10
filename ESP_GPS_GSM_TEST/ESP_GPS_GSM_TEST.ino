@@ -6,7 +6,7 @@ SoftwareSerial GPS    (D7, A0); // RX, TX
 
 const unsigned char UBX_HEADER[] = { 0xB5, 0x62 };
 
-const String PHONENUM = "09845350225";
+const String PHONENUM = "09448517225";
 const String BaseLink = "The current Location is https://www.google.com/maps/place/";
 String incoming = "";
 
